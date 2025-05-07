@@ -115,7 +115,7 @@
                         <h5 class="m-0 font-weight-bold text-primary">
                             <i class="fas fa-list me-2"></i>Data Jadwal Kuliah
                         </h5>
-                        <a href="{{ route('jadwalkuliahnama.create') }}" class="btn btn-success">
+                        <a href="{{ route('crud.create') }}" class="btn btn-success">
                             <i class="fas fa-plus-circle me-1"></i> Tambah Data
                         </a>
                     </div>
@@ -159,11 +159,11 @@
                                             {{ \Carbon\Carbon::parse($data->jam_selesai)->format('H:i') }}
                                         </td>
                                         <td class="text-center">
-                                            <form onsubmit="return confirm('Apakah Anda Yakin?');" action="{{ route('jadwalkuliahnama.destroy', $data->id) }}" method="POST">
-                                                <a href="{{ route('jadwalkuliahnama.show', $data->id) }}" class="btn btn-sm btn-info text-white btn-action">
+                                            <form onsubmit="return confirm('Apakah Anda Yakin?');" action="{{ route('crud.destroy', $data->id) }}" method="POST">
+                                                <a href="{{ route('crud.show', $data->id) }}" class="btn btn-sm btn-info text-white btn-action">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
-                                                <a href="{{ route('jadwalkuliahnama.edit', $data->id) }}" class="btn btn-sm btn-primary btn-action">
+                                                <a href="{{ route('crud.edit', $data->id) }}" class="btn btn-sm btn-primary btn-action">
                                                     <i class="fas fa-edit"></i>
                                                 </a>
                                                 @csrf
@@ -180,7 +180,7 @@
                                             <div class="py-3">
                                                 <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
                                                 <p class="text-muted mb-0">Belum ada data jadwal kuliah tersedia.</p>
-                                                <a href="{{ route('jadwalkuliahnama.create') }}" class="btn btn-sm btn-primary mt-3">
+                                                <a href="{{ route('crud.create') }}" class="btn btn-sm btn-primary mt-3">
                                                     <i class="fas fa-plus-circle me-1"></i> Tambah Data Sekarang
                                                 </a>
                                             </div>
