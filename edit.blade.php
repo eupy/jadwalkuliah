@@ -93,13 +93,13 @@
                         <h5 class="m-0 font-weight-bold text-primary">
                             <i class="fas fa-edit me-2"></i>Form Edit Data
                         </h5>
-                        <a href="{{ route('jadwalkuliahnama.index') }}" class="btn btn-sm btn-secondary">
+                        <a href="{{ route('crud.index') }}" class="btn btn-sm btn-secondary">
                             <i class="fas fa-list me-1"></i> Kembali ke Daftar
                         </a>
                     </div>
                     <div class="card-body">
 
-                        <form action="{{ route('jadwalkuliahnama.update', $jadwalkuliah->id) }}" method="POST">
+                        <form action="{{ route('crud.update', $jadwalkuliah->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 
@@ -276,7 +276,7 @@
                             </div>
 
                             <div class="d-flex justify-content-between mt-4">
-                                <a href="{{ route('jadwalkuliahnama.index') }}" class="btn btn-secondary">
+                                <a href="{{ route('crud.index') }}" class="btn btn-secondary">
                                     <i class="fas fa-arrow-left me-1"></i> Kembali
                                 </a>
                                 <button type="submit" class="btn btn-primary">
