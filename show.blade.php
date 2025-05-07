@@ -208,7 +208,7 @@
 
                         <div class="d-flex justify-content-between mt-4">
                             <form onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');"
-                                action="{{ route('jadwalkuliahnama.destroy', $jadwalkuliah->id) }}" method="POST">
+                                action="{{ route('crud.destroy', $jadwalkuliah->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">
@@ -217,10 +217,10 @@
                             </form>
 
                             <div>
-                                <a href="{{ route('jadwalkuliahnama.edit', $jadwalkuliah->id) }}" class="btn btn-primary">
+                                <a href="{{ route('crud.edit', $jadwalkuliah->id) }}" class="btn btn-primary">
                                     <i class="fas fa-edit me-1"></i> Edit Data
                                 </a>
-                                <a href="{{ route('jadwalkuliahnama.index') }}" class="btn btn-secondary ms-2">
+                                <a href="{{ route('crud.index') }}" class="btn btn-secondary ms-2">
                                     <i class="fas fa-arrow-left me-1"></i> Kembali
                                 </a>
                             </div>
